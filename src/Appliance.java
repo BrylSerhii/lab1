@@ -1,6 +1,6 @@
 public abstract class Appliance {
     private String name;
-    private double power; // потужність у Ватах
+    private double power;
     private boolean isPluggedIn;
 
     public Appliance(String name, double power) {
