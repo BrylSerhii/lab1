@@ -1,9 +1,11 @@
+package com.appliances;
+
 public abstract class Appliance {
     private String name;
-    private double power;
+    private int power;
     private boolean isPluggedIn;
 
-    public Appliance(String name, double power) {
+    public Appliance(String name, int power) {
         this.name = name;
         this.power = power;
         this.isPluggedIn = false;
@@ -13,7 +15,7 @@ public abstract class Appliance {
         return name;
     }
 
-    public double getPower() {
+    public int getPower() {
         return power;
     }
 
@@ -22,12 +24,13 @@ public abstract class Appliance {
     }
 
     public void plugIn() {
-        isPluggedIn = true;
+        this.isPluggedIn = true;
     }
 
     public void unplug() {
-        isPluggedIn = false;
+        this.isPluggedIn = false;
     }
 
-    public abstract String getType();
+    // Метод для отримання інформації про прилад
+    public abstract String getDescription();
 }
